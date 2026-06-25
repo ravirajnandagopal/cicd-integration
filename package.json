@@ -1,0 +1,19 @@
+{
+  "name": "cicd-integration",
+  "version": "1.0.0",
+  "description": "A GitHub Actions CI/CD showcase: matrix test execution, report merging, GitHub Pages publishing, and scheduled nightly runs, demonstrated with a small Playwright smoke suite.",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:ci": "playwright test --reporter=blob",
+    "report": "playwright show-report",
+    "merge": "playwright merge-reports --reporter html ./all-blob-reports"
+  },
+  "keywords": ["ci-cd", "github-actions", "playwright", "devops", "test-automation"],
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}
