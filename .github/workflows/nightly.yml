@@ -33,7 +33,9 @@ jobs:
         run: npx playwright install --with-deps ${{ matrix.browser }}
 
       - name: Run tests
-        run: npx playwright test --project=${{ matrix.browser }}
+        run: npx playwright test --project=${{ matrix.browser }} --reporter=html,list
+        env:
+          PLAYWRIGHT_HTML_OPEN: never
 
       - name: Upload report
         if: ${{ !cancelled() }}
