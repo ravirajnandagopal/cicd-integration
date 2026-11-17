@@ -2,10 +2,12 @@
 
 A **GitHub Actions** showcase demonstrating how automated test execution and reporting fit together into a real continuous-integration pipeline. It runs a small Playwright smoke suite across a **browser matrix**, **merges** the per-browser results into one HTML report, **publishes** that report to **GitHub Pages**, and runs a **scheduled nightly regression** that opens an issue on failure.
 
-The same patterns scale directly to the larger [Playwright](../playwright-automation-framework) and [API](../api-testing-framework) suites in the companion repositories.
+The same patterns scale directly to the larger [Playwright](https://github.com/ravirajnandagopal/playwright-automation-framework) and [API](https://github.com/ravirajnandagopal/api-testing-framework) suites in the companion repositories.
 
 ![CI Pipeline](https://github.com/ravirajnandagopal/cicd-integration/actions/workflows/ci.yml/badge.svg)
 ![Nightly Regression](https://github.com/ravirajnandagopal/cicd-integration/actions/workflows/nightly.yml/badge.svg)
+
+**Live test report:** https://ravirajnandagopal.github.io/cicd-integration/
 
 ## Pipeline at a glance
 
@@ -60,14 +62,6 @@ npm run test:ci   # emits a blob report
 npm run merge     # merges into ./playwright-report
 ```
 
-## Enabling GitHub Pages (one-time)
-
-1. Push this repository to GitHub.
-2. Go to **Settings → Pages**.
-3. Under **Build and deployment → Source**, choose **GitHub Actions**.
-4. Push to `main`/`master`. After the pipeline runs, the report is available at
-   `https://ravirajnandagopal.github.io/cicd-integration/`.
-
 ## Wiring in the other projects
 
 To run the full Playwright or API suites through this same pipeline, point a job at the relevant repository:
@@ -76,16 +70,6 @@ To run the full Playwright or API suites through this same pipeline, point a job
 - **API suite** — swap the Node steps for the Java + Maven steps (`actions/setup-java` then `mvn -B test`) and/or the Newman steps shown in that repo's `api-tests.yml`.
 
 A common production setup keeps each suite's workflow in its own repo (as Projects 1 and 2 do) and uses this repo to demonstrate the cross-cutting CI/CD concerns: matrices, report aggregation, scheduling, and publishing.
-
-## Status badges
-
-Add badges to any README by referencing a workflow file:
-
-```markdown
-![CI Pipeline](https://github.com/ravirajnandagopal/REPO/actions/workflows/ci.yml/badge.svg)
-```
-
-> Replace `ravirajnandagopal` throughout after pushing to GitHub.
 
 ## License
 
