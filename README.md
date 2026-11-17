@@ -4,8 +4,8 @@ A **GitHub Actions** showcase demonstrating how automated test execution and rep
 
 The same patterns scale directly to the larger [Playwright](../playwright-automation-framework) and [API](../api-testing-framework) suites in the companion repositories.
 
-![CI Pipeline](https://github.com/YOUR_USERNAME/cicd-integration/actions/workflows/ci.yml/badge.svg)
-![Nightly Regression](https://github.com/YOUR_USERNAME/cicd-integration/actions/workflows/nightly.yml/badge.svg)
+![CI Pipeline](https://github.com/ravirajnandagopal/cicd-integration/actions/workflows/ci.yml/badge.svg)
+![Nightly Regression](https://github.com/ravirajnandagopal/cicd-integration/actions/workflows/nightly.yml/badge.svg)
 
 ## Pipeline at a glance
 
@@ -66,7 +66,7 @@ npm run merge     # merges into ./playwright-report
 2. Go to **Settings → Pages**.
 3. Under **Build and deployment → Source**, choose **GitHub Actions**.
 4. Push to `main`/`master`. After the pipeline runs, the report is available at
-   `https://YOUR_USERNAME.github.io/cicd-integration/`.
+   `https://ravirajnandagopal.github.io/cicd-integration/`.
 
 ## Wiring in the other projects
 
@@ -82,10 +82,10 @@ A common production setup keeps each suite's workflow in its own repo (as Projec
 Add badges to any README by referencing a workflow file:
 
 ```markdown
-![CI Pipeline](https://github.com/YOUR_USERNAME/REPO/actions/workflows/ci.yml/badge.svg)
+![CI Pipeline](https://github.com/ravirajnandagopal/REPO/actions/workflows/ci.yml/badge.svg)
 ```
 
-> Replace `YOUR_USERNAME` throughout after pushing to GitHub.
+> Replace `ravirajnandagopal` throughout after pushing to GitHub.
 
 ## License
 
